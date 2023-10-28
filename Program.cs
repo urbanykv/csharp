@@ -4,12 +4,18 @@ namespace csharp
 {
     class Program
     {
-        static void Main(string[] args)
-        {
-            string nome = 'Matheus';
-            string sobrenome = ' Urban';
+        float health;
+        int speed;
+        string enemyName;
 
-            Console.WriteLine(nome + sobrenome);
-        }
+        int[] intArray;
+
+        void Movement(){
+            if(speed >= 0 || health > 0){
+
+            }else{
+
+            }
+        } 
     }
 }
