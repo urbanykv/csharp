@@ -1,21 +1,12 @@
-﻿using System;
+﻿using CSharp.Models;
+using System;
 
-namespace csharp
-{
-    class Program
-    {
-        float health;
-        int speed;
-        string enemyName;
+Pessoa Leandrinha = new Pessoa();
 
-        int[] intArray;
+Leandrinha.Nome = "Leandrinha";
+Leandrinha.Idade = 21;
+Leandrinha.Apresentar();
 
-        void Movement(){
-            if(speed >= 0 || health > 0){
+DateTime dataAtual = DateTime.Now;
 
-            }else{
-
-            }
-        } 
-    }
-}
+Console.WriteLine(dataAtual);
