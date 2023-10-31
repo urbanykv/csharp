@@ -1,26 +1,30 @@
 ﻿using CSharp.Models;
-using System;
 
-Pessoa Leandrinha = new Pessoa();
+Pessoa Aluno01 = new()
+{
+    Nome = "Matheus",
+    Sobrenome = "Urban",
+    Idade = 21
+};
 
-Leandrinha.Nome = "Leandrinha";
-Leandrinha.Idade = 21;
-Leandrinha.Apresentar();
+Pessoa Aluno02 = new()
+{
+    Nome = "Rebeca",
+    Sobrenome = "Urban",
+    Idade = 13
+};
 
-DateTime dataAtual = DateTime.Now; // Data
+Pessoa Aluno03 = new("Débora", "Urban", 25);
 
-Console.WriteLine(dataAtual.ToString("dd/MM/yyyy"));
+Curso Ingles = new()
+{
+    Nome = "Inglês",
+    Alunos = new List<Pessoa>()
+};
 
-int a = 30;
+Ingles.AdicionarAluno(Aluno01);
+Ingles.AdicionarAluno(Aluno02);
+Ingles.AdicionarAluno(Aluno03);
 
-a += 5;
+Ingles.ListarAlunos();
 
-a -= 5;
-
-a *= 5;
-
-a /= 5;
-
-int b = Convert. "5";
-
-Console.WriteLine(a);
