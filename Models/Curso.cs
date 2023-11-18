@@ -25,9 +25,9 @@ namespace CSharp.Models
 
         public void ListarAlunos()
         {
-            foreach(Pessoa Aluno in Alunos)
+            for(int contador = 0; contador < Alunos.Count; contador++)
             {
-                Console.WriteLine(Aluno.NomeCompleto);
+                Console.WriteLine(Alunos[count]);
             }
         }
 
