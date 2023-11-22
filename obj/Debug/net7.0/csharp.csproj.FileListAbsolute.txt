@@ -12,3 +12,4 @@ C:\Users\Urban\Documents\Desenvolvimento Web\Projetos\csharp\obj\Debug\net7.0\re
 C:\Users\Urban\Documents\Desenvolvimento Web\Projetos\csharp\obj\Debug\net7.0\csharp.pdb
 C:\Users\Urban\Documents\Desenvolvimento Web\Projetos\csharp\obj\Debug\net7.0\csharp.genruntimeconfig.cache
 C:\Users\Urban\Documents\Desenvolvimento Web\Projetos\csharp\obj\Debug\net7.0\ref\csharp.dll
+C:\Users\Urban\Documents\Desenvolvimento Web\Projetos\csharp\obj\Debug\net7.0\csharp.sourcelink.json
