@@ -24,10 +24,11 @@ namespace CSharp.Models
         }
 
         public void ListarAlunos()
-        {
+        {   
+            Console.WriteLine($"Alunos do curso: {Nome}");
             for(int contador = 0; contador < Alunos.Count; contador++)
             {
-                Console.WriteLine(Alunos[count]);
+                Console.WriteLine($"{contador + 1} - {Alunos[contador]}");
             }
         }
 
