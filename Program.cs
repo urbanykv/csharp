@@ -29,7 +29,8 @@ List<string> nomesList = new()
     "Leila",
     "Pércio",
     "Rebeca",
-    "Débora" 
+    "Débora",
+    "Gustavo"
 };
 
 Console.WriteLine(nomesList[0]);
