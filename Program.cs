@@ -1,6 +1,6 @@
 ﻿try
 {
-    string[] linhas = File.ReadAllLines("./arquivoDeeLeitura.txt");
+    string[] linhas = File.ReadAllLines("./arquivoDeLeitura.txt");
 
     foreach ( string linha in linhas )
     {
@@ -32,7 +32,10 @@ List<string> nomesList = new()
     "Débora"
 };
 
-Console.WriteLine(nomesList[0]);
+foreach(string nome in nomesList)
+{
+    Console.WriteLine(nome);
+}
 
 
 
