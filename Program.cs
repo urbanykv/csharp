@@ -11,6 +11,10 @@ catch(Exception ex)
 {
     Console.WriteLine($"Ocorreu uma exceção Generica {ex.Message}");
 }
+finally
+{
+    Console.WriteLine("Chegou até aqui.");
+}
 
 string[] nomes = new string[5];
 
