@@ -1,45 +1,154 @@
-﻿try
-{
-    string[] linhas = File.ReadAllLines("./arquivoDeLeitura.txt");
+﻿
+Dictionary<string, string> dicionario = new();
 
-    foreach ( string linha in linhas )
-    {
-        Console.WriteLine(linha);
-    }
-}
-catch(Exception ex)
+dicionario.Add("Nome", "Matheus");
+dicionario.Add("Sobrenome", "Urban");
+
+foreach (var item in dicionario)
 {
-    Console.WriteLine($"Ocorreu uma exceção Generica {ex.Message}");
-}
-finally
-{
-    Console.WriteLine("Chegou até aqui.");
+    Console.WriteLine($"{item.Key}: {item.Value}");
 }
 
-string[] nomes = new string[5];
+dicionario.Remove("Sobrenome");
 
-nomes[0] = "Matheus";
-nomes[1] = "Giulia";
-nomes[2] = "Pércio";
-nomes[3] = "Rebeca";
-nomes[4] = "Débora";
+dicionario["Nome"] = "Leandro";
 
-Console.WriteLine(nomes);
-
-List<string> nomesList = new()
+foreach (var item in dicionario)
 {
-    "Matheus",
-    "Giulia",
-    "Leila",
-    "Pércio",
-    "Rebeca",
-    "Débora"
-};
-
-foreach(string nome in nomesList)
-{
-    Console.WriteLine(nome);
+    Console.WriteLine($"{item.Key}: {item.Value}");
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+// using System.Collections.Generic;
+// using System.Numerics;
+
+// Stack<int> pilha = new();
+
+// pilha.Push(4);
+// pilha.Push(8);
+// pilha.Push(16);
+// pilha.Push(32);
+// pilha.Push(64);
+
+// foreach(int item in pilha)
+// {
+//     Console.WriteLine(item);
+// }
+
+// pilha.Pop();
+
+// foreach(int item in pilha)
+// {
+//     Console.WriteLine(item);
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// using System.Collections.Generic;
+// using System.Numerics;
+
+// Queue <int> fila = new();
+
+// fila.Enqueue(2);
+// fila.Enqueue(4);
+// fila.Enqueue(6);
+// fila.Enqueue(8);
+// fila.Enqueue(10);
+
+// foreach(int item in fila)
+// {
+//     Console.WriteLine(item);
+// }
+
+// fila.Dequeue();
+
+// foreach(int item in fila)
+// {
+//     Console.WriteLine(item);
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// try
+// {
+//     string[] linhas = File.ReadAllLines("./arquivoDeLeitura.txt");
+
+//     foreach ( string linha in linhas )
+//     {
+//         Console.WriteLine(linha);
+//     }
+// }
+// catch(Exception ex)
+// {
+//     Console.WriteLine($"Ocorreu uma exceção Generica {ex.Message}");
+// }
+// finally
+// {
+//     Console.WriteLine("Chegou até aqui.");
+// }
+
+// string[] nomes = new string[5];
+
+// nomes[0] = "Matheus";
+// nomes[1] = "Giulia";
+// nomes[2] = "Pércio";
+// nomes[3] = "Rebeca";
+// nomes[4] = "Débora";
+
+// Console.WriteLine(nomes);
+
+// List<string> nomesList = new()
+// {
+//     "Matheus",
+//     "Giulia",
+//     "Leila",
+//     "Pércio",
+//     "Rebeca",
+//     "Débora"
+// };
+
+// foreach(string nome in nomesList)
+// {
+//     Console.WriteLine(nome);
+// }
 
 
 
