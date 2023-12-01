@@ -1,22 +1,71 @@
-﻿
-Dictionary<string, string> dicionario = new();
+﻿using System;
 
-dicionario.Add("Nome", "Matheus");
-dicionario.Add("Sobrenome", "Urban");
-
-foreach (var item in dicionario)
+class Program
 {
-    Console.WriteLine($"{item.Key}: {item.Value}");
+    static void Main()
+    {
+        // Solicita o nome do usuário, quilômetros percorridos por dia, 
+       // Horas de uso de eletrônicos por dia e o número de refeições com carne:
+       string nome = Console.ReadLine();
+       double quilometrosPorDia = double.Parse(Console.ReadLine());
+       int horasDeEletronicos = int.Parse(Console.ReadLine());
+       int refeicoesComCarne = int.Parse(Console.ReadLine());
+
+        // Chama o método para calcular a pegada de carbono
+        double pegadaDeCarbono = CalcularPegadaDeCarbono(quilometrosPorDia, horasDeEletronicos, refeicoesComCarne);
+        
+        // TODO: Exiba o resultado para o usuário:
+        Console.WriteLine($"{nome}, sua pegada de carbono e de {pegadaDeCarbono} toneladas de CO2 por ano.");
+
+        // Aguarda a entrada do usuário antes de encerrar o programa:
+        Console.ReadLine();
+    }
+
+    // TODO: Crie um método/função para calcular a pegada de carbono com base nos parâmetros fornecidos:
+    static double CalcularPegadaDeCarbono(double kmPorDia, int horasDeEletronicos, int refeicoesComCarne)
+    {
+        // Fatores de emissão
+        double fatorTransporte = 0.2;
+        double fatorEletronicos = 0.1;
+        double fatorCarne = 0.5;
+
+        // Cálculo da pegada de carbono
+        double pegadaTransporte = kmPorDia * 365 * fatorTransporte;
+        double pegadaEletronicos = horasDeEletronicos * fatorEletronicos;
+        double pegadaCarne = refeicoesComCarne * fatorCarne;
+
+        // Soma dos valores para obter a pegada total
+        double pegadaTotal = pegadaTransporte + pegadaEletronicos + pegadaCarne;
+
+        return pegadaTotal;
+    }
+
 }
 
-dicionario.Remove("Sobrenome");
 
-dicionario["Nome"] = "Leandro";
 
-foreach (var item in dicionario)
-{
-    Console.WriteLine($"{item.Key}: {item.Value}");
-}
+
+
+
+
+// Dictionary<string, string> dicionario = new();
+
+// dicionario.Add("Nome", "Matheus");
+// dicionario.Add("Sobrenome", "Urban");
+
+// foreach (var item in dicionario)
+// {
+//     Console.WriteLine($"{item.Key}: {item.Value}");
+// }
+
+// dicionario.Remove("Sobrenome");
+
+// dicionario["Nome"] = "Leandro";
+
+// foreach (var item in dicionario)
+// {
+//     Console.WriteLine($"{item.Key}: {item.Value}");
+// }
 
 
 
